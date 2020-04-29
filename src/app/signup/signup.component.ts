@@ -11,9 +11,10 @@ import { Router } from '@angular/router';
 })  
 export class SignupComponent implements OnInit {  
   
-  private userDetail = new AdminDetail();  
+  private userDetail = new AdminDetail();
+  //private displayUserDetail = new signupsuccessComponent();  
   
-  constructor(private adminService : AdminService, private router : Router) { }  
+  constructor(private adminService : AdminService, private displayUserDetail : SignupsuccessComponent, private router : Router) { }  
   
   ngOnInit() {  
   }  
@@ -57,7 +58,10 @@ export class SignupComponent implements OnInit {
         this.userDetail.state = this.State.value;
         this.userDetail.zip = this.Zip.value;
         this.userDetail.country = this.Country.value;
-        this.userDetail.password = this.Password.value;   
+        this.userDetail.password = this.Password.value; 
+        
+        
+        this.displayUserDetail.showUserDetails(this.userDetail);
   
         this.adminService.saveAdminDetails(this.userDetail).subscribe(  
           response => {  

@@ -11,5 +11,9 @@ export class SignupsuccessComponent implements OnInit {
 
   ngOnInit(): void {
   }
+   showUserDetails(adminDetail : AdminDetail){
+    
+
+   }
 
 }
