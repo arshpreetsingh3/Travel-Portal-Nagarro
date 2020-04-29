@@ -1,0 +1,128 @@
+<div class="container">
+    <div class="row">
+        <h3>Ticket Request Details:</h3>
+    </div>
+    <form [formGroup]="form" #TicketInformation (ngSubmit)="TicketForm(TicketInformation)">
+    <div class="row">
+        <div class=" col-md-offset-1 col-md-4">
+            <label for="RequestType">RequestType*:</label>
+            <select class="form-control">
+                    <option value=" "> </option>
+                    <option value="travel" formControlName="requestType">Travel Tickets</option>
+                    <option value="hotel" formControlName="requestType">Hotel Stay</option>
+                    <option value="Visa" formControlName="requestType">Visa</option>
+                    <option value="Work" formControlName="requestType">Work Permit</option>
+                    </select>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class=" col-md-offset-1 col-md-4">
+            <label for="Priority">Priority*:</label>
+            <select class="form-control">
+                    <option value=" "> </option>
+                    <option value="normal" formControlName="priority">Normal</option>
+                    <option value="urgent" formControlName="priority">Urgent</option>
+                    <option value="immediate" formControlName="priority">Immediate</option>
+                    </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class=" col-md-offset-1 col-md-4">
+            <label for="TravelCity">TravelCity*:</label>
+            <select class="form-control">
+                    <option value=" "> </option>
+                    <option value="delhi" formControlName="travelCity">London</option>
+                    <option value="Mumbai" formControlName="travelCity">Paris</option>
+                    <option value="hyderabad" formControlName="travelCity">Tokyo</option>
+                    </select>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class=" col-md-offset-1 col-md-4">
+            <label for="LocationCity">LocationCity*:</label>
+            <select class="form-control">
+                    <option value=" "> </option>
+                    <option value="delhi" formControlName="locationCity">Delhi</option>
+                    <option value="Mumbai" formControlName="locationCity">Mumbai</option>
+                    <option value="hyderabad" formControlName="locationCity">Hyderabad</option>
+                    </select>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class=" col-md-offset-1 col-md-4">
+            <label for="StartDate"> Travel StartDate*</label>
+            <input formControlName="startDate" class="form-control" type="date" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class=" col-md-offset-1 col-md-4">
+            <label for="EndDate">Travel EndDate*</label>
+            <input formControlName="endDate" class="form-control" type="date" required>
+        </div>
+    </div>
+
+    <div class=" row ">
+        <div class=" col-md-offset-1 col-md-4 ">
+            <label for="PassportNumber "> PassportNumber*</label>
+            <input formControlName="passportNumber" class="form-control " pattern="^[a-zA-Z0-9]+$ {1,25}" maxlength="25" type ="text" required>
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class=" col-md-offset-1 col-md-4 ">
+            <label for="ProjectName ">ProjectName*</label>
+            <input formControlName="projectName" class="form-control " type="text" maxlength="100" required>
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class=" col-md-offset-1 col-md-4 ">
+            <label for="expenses"> Expense Borne by:*</label><br>
+            <input type="radio" formControlName="expenses" value="male">
+            <label for="Nagarro">Nagarro</label><br>
+            <input type="radio" formControlName="expenses" value="female">
+            <label for="Client">Client</label>
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class=" col-md-offset-1 col-md-4 ">
+            <label for="approverName "> Travel Approver Name</label>
+            <input formControlName="approverName" class="form-control " maxlength="100" type="text ">
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class=" col-md-offset-1 col-md-4 ">
+            <label for="duration "> Expected Duration</label>
+            <input formControlName="duration" class="form-control " maxlength="100" type="text ">
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class=" col-md-offset-1 col-md-4 ">
+            <label for="upperBound "> Any Upper Bound on the allowed amount?If yes,Please Specify</label>
+            <input formControlName="upperBound" class="form-control " maxlength="500" type="text ">
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class=" col-md-offset-1 col-md-4 ">
+            <label for="additionalDetails "> AdditionalDetails*</label>
+            <input formControlName="additionalDetails" class="form-control" maxlength="1000" type="text " required>
+        </div>
+    </div>
+    <div class="row " style="margin-top: 40px; ">
+        <div class="col-md-offset-1 col-md-4 ">
+            <button class="btn btn-md btn-secondary btn-style "><a [routerLink]="['/ticket-confirmation']">Submit</a></button>
+        </div>
+    </div>
+
+</form>
+
+
+</div>

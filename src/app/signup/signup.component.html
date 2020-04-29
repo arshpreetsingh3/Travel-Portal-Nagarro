@@ -1,0 +1,226 @@
+<h2>SignUp form</h2>
+
+<form [formGroup]="form" #UserInformation (ngSubmit)="UserForm(UserInformation)">
+
+    <div class="row">
+        <div class=" col-md-offset-1 col-md-4">
+            <label for="firstName"> First Name*</label>
+            <input formControlName="firstName" class="form-control" type="text" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class=" col-md-offset-1 col-md-4">
+            <label for="lastName"> Last Name*</label>
+            <input formControlName="lastName" class="form-control" type="text" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class=" col-md-offset-1 col-md-4">
+            <label for="bussinessUnit"> Bussiness Unit*</label>
+            <input formControlName="bussinessUnit" class="form-control" type="text" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class=" col-md-offset-1 col-md-4">
+            <label for="title"> Title*</label>
+            <input formControlName="title" class="form-control" type="text" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class=" col-md-offset-1 col-md-4">
+            <label for="email">Enter nagarro EmailId*</label>
+            <input formControlName="email" class="form-control" pattern=".+@nagarro.com" size="30" placeholder="user@nagarro.com" required>
+        </div>
+    </div>
+
+    <div class=" row ">
+        <div class=" col-md-offset-1 col-md-4 ">
+            <label for="telephone "> Telephone*</label>
+            <input formControlName="telephone" class="form-control " placeholder="enter Telephone no upto 15 alphanumeric characters " required>
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class=" col-md-offset-1 col-md-4 ">
+            <label for="address1 "> Address1*</label>
+            <input formControlName="address1" class="form-control " type="text " required>
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class=" col-md-offset-1 col-md-4 ">
+            <label for="address2 "> Address2</label>
+            <input formControlName="address2" class="form-control " type="text ">
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class=" col-md-offset-1 col-md-4 ">
+            <label for="city "> City*</label>
+            <input formControlName="city" class="form-control " type="text " required>
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class=" col-md-offset-1 col-md-4 ">
+            <label for="state "> State*</label>
+            <input formControlName="state" class="form-control " type="text " required>
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class=" col-md-offset-1 col-md-4 ">
+            <label for="zip "> Zip*</label>
+            <input formControlName="zip" class="form-control " type="text " required>
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class=" col-md-offset-1 col-md-4 ">
+            <label for="country "> Country*</label>
+            <input formControlName="country" class="form-control " type="text " required>
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class=" col-md-offset-1 col-md-4 ">
+            <label for="password "> Password*</label>
+            <input formControlName="password" class="form-control " type="password " required>
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class=" col-md-offset-1 col-md-4 ">
+            <label for="confirmPassword "> Confirm Password*</label>
+            <input formControlName="confirmPassword" class="form-control " type="password " required>
+        </div>
+    </div>
+
+    <div class="row " style="margin-top: 40px; ">
+        <div class="col-md-offset-1 col-md-4 ">
+            <button class="btn btn-md btn-primary btn-style ">Save</button>
+        </div>
+    </div>
+
+</form>
+<!-- <div class="container ">
+    <div class="col-sm-3 jumbotron ">
+        <h1>Nagarro OnlineTicket Portal</h1>
+    </div>
+    <div class="col-sm-9 ">
+        <div class="row ">
+            <div class="col-sm-3 ">
+
+            </div>
+            <div class="col-sm-6 ">
+                <form [formGroup]="form " #AdminInformation (ngSubmit)="AdminForm(AdminInformation) ">
+                    <div>
+                        <label for="firstName "> First Name*</label>
+                        <input formControlName="firstName " class="form-control " type="text ">
+                    </div>
+                    <div>
+                        <label for="lastName "> Last Name*</label>
+                        <input formControlName="lastName " class="form-control " type="text ">
+                    </div>
+
+                    <div>
+                        <label for="bussinessUnit "> Bussiness Unit*</label>
+                        <input formControlName="bussinessUnit " class="form-control " type="text ">
+                    </div>
+
+                    <div>
+                        <label for="title "> Title*</label>
+                        <input formControlName="title " class="form-control " type="text ">
+                    </div>
+
+                    <div>
+                        <label for="email "> Email*</label>
+                        <input formControlName="email " class="form-control " type="text ">
+                    </div>
+
+                    <div>
+                        <label for="telephone "> Telephone*</label>
+                        <input formControlName="telephone " class="form-control " type="text ">
+                    </div>
+
+                    <div>
+                        <label for="address1 "> Address1*</label>
+                        <input formControlName="address1 " class="form-control " type="text ">
+                    </div>
+
+                    <div>
+                        <label for="address2 "> Address2*</label>
+                        <input formControlName="address2 " class="form-control " type="text ">
+                    </div>
+
+                    <div>
+                        <label for="city "> City*</label>
+                        <input formControlName="city " class="form-control " type="text ">
+                    </div>
+
+                    <div>
+                        <label for="state "> State*</label>
+                        <input formControlName="state " class="form-control " type="text ">
+                    </div>
+
+                    <div>
+                        <label for="zip "> Zip*</label>
+                        <input formControlName="zip " class="form-control " type="text ">
+                    </div>
+
+                    <div>
+                        <label for="country "> Country*</label>
+                        <input formControlName="country " class="form-control " type="text ">
+                    </div>
+
+                    <div>
+                        <label for="password "> Password*</label>
+                        <input formControlName="password " class="form-control " type="password ">
+                    </div>
+
+                    <div>
+                        <label for="confirmPassword "> Confirm Password*</label>
+                        <input formControlName="confirmPassword " class="form-control " type="password ">
+                    </div>
+
+                    <div style="margin-top: 40px; ">
+                        <div>
+                            <button class="btn btn-md btn-primary btn-style ">Save</button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="col-sm-3 "></div>
+        </div>
+
+    </div>
+    <div class="col-sm-3 "></div>
+</div> -->
+
+<!-- <div class="container ">
+    <div class="row ">
+        <div class="col ">
+            1 of 2
+        </div>
+        <div class="col ">
+            2 of 2
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col ">
+            1 of 3
+        </div>
+        <div class="col ">
+            2 of 3
+        </div>
+        <div class="col ">
+            3 of 3
+        </div>
+    </div>
+</div> -->

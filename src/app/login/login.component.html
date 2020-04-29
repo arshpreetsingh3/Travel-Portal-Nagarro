@@ -1,0 +1,55 @@
+<div>
+    <span><h2>Login form</h2></span>
+    <span><h5 style="margin-left: 800px;"><a [routerLink]="['/admin-login']">Admin Login</a></h5></span>
+</div>
+
+<form [formGroup]="form" #LoginInformation (ngSubmit)="Login(LoginInformation)">
+
+    <div class="row">
+        <div class=" col-md-offset-1 col-md-4">
+            <label for="email"> Email </label>
+            <input formControlName="email" class="form-control" type="email" placeholder="Enter your email" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class=" col-md-offset-1 col-md-4">
+            <label for="password"> Password </label>
+            <input formControlName="password" class="form-control" type="password" placeholder="Enter your Password" required>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 40px;">
+        <div class="col-md-offset-1 col-md-4">
+            <button class="btn btn-md btn-primary btn-style">Login</button> New User?<button class="btn btn-sm btn-secondary"><a [routerLink]="['/signup']">SignUp</a></button>
+
+        </div>
+    </div>
+    <div class="row" style="margin-top: 40px;">
+        <div class="col-md-offset-1 col-md-4">
+            <a [routerLink]="['/forgot-password']">Forgot your Username Or Password?</a>
+        </div>
+    </div>
+</form>
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col">
+            1 of 2
+        </div>
+        <div class="col">
+            2 of 2
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            1 of 3
+        </div>
+        <div class="col">
+            2 of 3
+        </div>
+        <div class="col">
+            3 of 3
+        </div>
+    </div>
+</div> -->

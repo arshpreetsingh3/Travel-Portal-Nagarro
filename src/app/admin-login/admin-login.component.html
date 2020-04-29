@@ -1,0 +1,25 @@
+        <div>
+        <h2>Admin Login:</h2>
+        </div>
+
+    <form [formGroup]="form" #AdminLoginInformation (ngSubmit)="Login(AdminLoginInformation)">
+            <div class="row">
+                <div class=" col-md-offset-1 col-md-4">
+                    <label for="email"> Email </label>
+                    <input formControlName="email" class="form-control" type="email" placeholder="Enter your email" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class=" col-md-offset-1 col-md-4">
+                    <label for="password"> Password </label>
+                    <input formControlName="password" class="form-control" type="password" placeholder="Enter your Password" required>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 40px;">
+                <div class="col-md-offset-1 col-md-4">
+                    <button class="btn btn-md btn-primary btn-style">Submit</button>
+
+                </div>
+            </div>
+        </form>
